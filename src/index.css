@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Food donation theme design system - warm, appetizing colors */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - warm creams and soft whites */
+    --background: 45 15% 98%;
+    --foreground: 30 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card colors - soft white with warm undertones */
+    --card: 40 20% 99%;
+    --card-foreground: 30 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover colors */
+    --popover: 40 20% 99%;
+    --popover-foreground: 30 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - warm orange theme */
+    --primary: 20 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 90% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - fresh green for vegetables */
+    --secondary: 120 40% 85%;
+    --secondary-foreground: 120 60% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - soft warm grays */
+    --muted: 35 15% 92%;
+    --muted-foreground: 30 8% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - earthy brown */
+    --accent: 25 35% 75%;
+    --accent-foreground: 25 60% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - soft red */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border and inputs - warm neutrals */
+    --border: 35 20% 88%;
+    --input: 35 20% 94%;
+    --ring: 20 85% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Food-themed gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(135deg, hsl(20 80% 60%), hsl(35 85% 65%));
+    --gradient-fresh: linear-gradient(135deg, hsl(120 45% 70%), hsl(90 50% 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 85% 55%) 0%, hsl(35 80% 60%) 50%, hsl(120 40% 65%) 100%);
+    
+    /* Glassmorphism effects */
+    --glass-bg: hsla(40, 20%, 99%, 0.85);
+    --glass-border: hsla(35, 20%, 88%, 0.5);
+    --glass-shadow: 0 8px 32px hsla(20, 85%, 55%, 0.15);
+    
+    /* Animation tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
